@@ -9,7 +9,7 @@ Route::get('/', [PublicController::class,'homepage'])->name('home');
 
 Route::get('/articles',[ArticleController::class,'articles'])->name('articoli');
 
-Route::get('/articles/dettaglio/{title}',[ArticleController::class,'detail'])->name('detail');
+Route::get('/articles/dettaglio/{title}/{price}',[ArticleController::class,'detail'])->name('detail');
 
 Route::get('/about_us',[StaffController::class,'chi_siamo'])->name('about.us');
 

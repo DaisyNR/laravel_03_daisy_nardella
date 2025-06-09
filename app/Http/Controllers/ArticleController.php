@@ -18,11 +18,11 @@ class ArticleController extends Controller
         return view('articoli',['articles'=>$this->articles]);
     }
 
-    public function detail($title)
+    public function detail($title, $price)
     {
         foreach($this->articles as $article){
             if ($title == $article['title']) {
-                return view('Article.dettaglioArticle', ['article'=>$article]);
+                return view('Article.dettaglioArticle', ['title'=>$title, 'price'=>$price]);
             }
         }
     }
